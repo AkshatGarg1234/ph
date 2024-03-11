@@ -1,0 +1,85 @@
+.carousel-item img {
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+}
+
+    .carousel-caption {
+        width: 50%;
+        /* You can adjust this width as needed */
+        margin: auto;
+    }
+
+    /* .card {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Add box shadow 
+        }
+    */
+
+    .card-body {
+        height: 280px;
+        /* Set a fixed height for consistent card height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #main {
+        margin: 35px;
+    }
+    .card {
+    margin-bottom: 20px; /* Add space between cards */
+    margin-right: 20px;
+    background-color:rgb(247, 239, 226);
+    transition: box-shadow 0.3s ease; /* Add transition effect for the shadow */
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+.border {
+    border: 1px solid #dee2e6; /* Add border for better visibility */
+}
+
+
+.custom-card:hover {
+    transform: scale(1.05); /* Zoom in effect on hover */
+} 
+.faq h2{
+    font-size: 32px;
+    text-align: center;
+}
+.faq h2{
+    text-align: center;
+    font-size: 40px;
+    /* font-weight: bolder; */
+}
+.faq{
+    background-color: white;
+    color: black;
+    padding:18px;
+    margin: 7px;
+}
+.faq-box{
+    display: flex;
+    justify-content: space-between;
+    padding:17px;
+    background-color:#edddc9;
+    color: black;
+    max-width: 50vw;
+    margin:9px auto;
+    cursor:pointer;
+    /* width:1206.38px; */
+}
+
+.faq-box:hover{
+    background-color: #414141;
+    color:white
+    
+}
+.linksx{
+    color: white;
+    text-decoration: none;
+}

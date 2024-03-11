@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    appearance: none;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body{
+    background-image: linear-gradient(to right, rgb(246, 246, 246), rgb(244, 204, 131));
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: left;
+    color: rgb(64, 64, 64);
+}
+.sidebar{
+    position: fixed;
+    width: 15vw;
+    height: 100vh;
+    /* border: 2px solid; */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+.sidebar .logo{
+    height: 20%;
+    background-color: white;
+    width: 90%;
+    margin: 5% 0 0 5%;
+    border-radius: 10%;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+}
+.sidebar .sidebarMain{
+    background-color: white;
+    border-radius: 5%;
+    height: 75%;
+    width: 90%;
+    margin: 5% 0 0 5%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    gap: 2%;
+}
+.sidebarMain .sidebarContent{
+    font-size: 1.1rem;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+    color: rgb(64, 64, 64);
+    font-family: 'Poppins',sans-serif;
+}
+#logout{
+    margin-top: auto;
+}
+.SCHoverable:hover{
+    margin-left: 15%;
+    /* background-color: rgb(255, 202, 179, 0.5);
+    border-left: 10px solid wheat; */
+    transition: all .2s ease;
+    border-radius: 10% 0 0 10%;
+}
+.sidebarContent img{
+    margin-bottom: -3%;
+    margin-right: 2%;
+}
+.sidebarContent a{
+    color: black;
+    text-decoration: none;
+}
+#dashboard{
+    background-color: rgb(255, 202, 179, 0.5);
+    border-left: 10px solid wheat;
+    border-radius: 10% 0 0 10%;
+}
+#dashboard p{
+    margin-left: 5%;
+}
+#logout {
+    margin-top: auto; /* Push the logout link to the bottom */
+}
+.centre{
+    position: absolute;
+    width: 80%;
+    height: 100vh;
+    /* border: 2px solid; */
+    margin:0 2% 0 17%;
+}
+.centre h1{
+    font-size: 3rem;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 800;
+    color: rgb(64, 64, 64);
+}
+.centre #birthday{
+    width: 15%;
+    height: 5%;
+    text-align: center;
+    padding: 2px;
+    border-radius: 10%;
+}
+#birthday:hover{
+    scale: 1.02;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    transition: all .3s ease-in-out;
+    border: none;
+}
+.centre .insights{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    flex-wrap: wrap;
+}
+.c{
+    width: 25vw;
+    height: 25vh;
+    background-color: white;
+    border-radius: 10%;
+    padding: 2%;
+}
+.c p{
+    font-size: 120%;
+    margin-bottom: 2%;
+}
+.c h2{
+    font-size: 200%;
+}
+.c:hover{
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    scale: 1.05;
+    transition: all .3s ease-in-out;
+    
+}
+
+.centre .slots{
+    width: 100%;
+    height: auto;
+    border-radius: 15%;
+    display: flex;
+    justify-content: left;
+    gap: 4%;
+    flex-wrap: wrap;
+}
+.slots .slotCard{
+    font-size: 100%;
+    margin-top: 1%;
+    width: 22%;
+    height: 40vh;
+    border-radius: 15%;
+    background-color: white;
+    margin-bottom: 2%;
+}
+
+.slotCard:hover{
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    scale: 1.03;
+    transition: all .3s ease;
+}
+
+.details {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15%;
+    font-size: 90%;
+    word-wrap: wrap;
+}
+
+.details p {
+    margin: 5px 0;
+
+}
+
+.availability {
+    background-color: grey; /* Background color */
+    color: #333; /* Text color */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Border radius */
+    padding: 5px; /* Padding */
+
+}
+
+.remove {
+    width: 27%;
+    height: 12%;
+    margin-top: 10px;
+    background-color: rgb(241, 183, 74);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.remove:hover {
+    background-color: #c82333;
+}
+
+#add{
+    margin-top: 1%;
+    width: 22%;
+    height: 40vh;
+    border-radius: 15%;
+    border: 5px dashed rgb(246, 211, 146);
+    margin-bottom: 2%;
+    text-align: center;
+}
+#add p{
+    margin-top: 15%;
+    font-size: 11rem;
+    color: rgb(246, 211, 146);
+}
+/* Modal container styles */
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* Modal styles */
+.modal {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+}
+/* Modal header styles */
+.modal-header {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+/* Close button styles */
+.close {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}  
+ /* Modal body styles */
+.modal-body {
+    padding: 10px;
+}  
+/* Form label styles */
+label {
+    font-weight: bold;
+}  
+/* Form input styles */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}  
+/* Modal footer styles */
+.modal-footer {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}  
+/* Save button styles */
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}  
+.btn:hover {
+    background-color: #0056b3;
+}
+    
+#f{
+    display: none;
+}
+@media (max-width:1000px){ 
+    .navContent{
+        display: none;
+    }
+    .sidebar{
+        width: 5vw;
+    }
+    .centre{
+        width: 90vw;
+        margin-left: 7vw;
+    }
+    .c{
+        width: 27vw;
+    }
+    #dashboard{
+        background-color: rgb(255, 202, 179, 0.5);
+        border-left: none;
+        border-radius: 10% 0 0 10%;
+    }
+    #dashboard p{
+        margin-left: 0;
+    }
+}
+@media(max-width:768px){
+    #birthday{
+        width: 309px;
+    }
+    #logout{
+        margin-top: 1000%;
+    }
+    .c{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    #dashboard{
+        margin-left: -5;
+    }
+    .sidebarImg{
+        height: 20px;
+        width: 20px;
+    }
+    #add{
+        width: 30%;
+    }
+    .slots .slotCard{
+        width: 30%;
+    }
+    
+    
+}
+@media(max-width:500px){
+    .sidebar{
+        display: none;
+    }
+    .centre{
+        margin: 0 5% 0 5%;
+        width: 90vw;
+    }
+    #add p{
+        font-size: 8rem;
+        padding-top: 25%;
+    }
+    #add{
+        width: 40vw;
+    }
+    .slots .slotCard{
+        width: 40vw;
+    }
+}

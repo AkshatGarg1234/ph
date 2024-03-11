@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+        <!-- sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="park HUb (1).png" alt="logo">
+            </div>
+
+            <div class="sidebarMain">
+
+                <div class="sidebarContent" id="dashboard">
+                    <p><img width="25" height="25" class="sidebarImg" src="https://img.icons8.com/ios/25/control-panel--v1.png" alt="control-panel--v1"/>   <span class="navContent">Dashboard</span></p>
+                </div>
+                <!-- <div class="sidebarContent SCHoverable">
+                    <p><img width="25" height="25" class="sidebarImg" src="https://img.icons8.com/ios-glyphs/25/analytics.png" alt="analytics"/>  <span class="navContent"> Analytics</span></p>
+                </div>
+                <div class="sidebarContent SCHoverable">
+                    <p><img width="25" height="25" class="sidebarImg"src="https://img.icons8.com/ios/50/settings--v1.png" alt="settings--v1"/>   <span class="navContent">Settings</span></p>
+                </div>
+                <div class="sidebarContent SCHoverable">
+                    <p><img width="25" height="30" class="sidebarImg"src="https://img.icons8.com/ios/25/complaint.png" alt="complaint"/>   <span class="navContent">Reports</span></p>
+                </div> -->
+                <div class="sidebarContent SCHoverable" id="logout">
+                    <a href="../index.html"><p><img width="25" height="30" class="sidebarImg"src="https://img.icons8.com/dotty/25/exit.png" alt="exit"/>   <span class="navContent">Logout</span></p></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- center -->
+        <div class="centre">
+            <br><br>
+            <h1>Dashboard</h1>
+            <br>
+            <input type="date" id="birthday" name="birthday">
+            <div class="insights">
+                <div class="c c1">
+                    <img width="50" height="50" src="https://img.icons8.com/windows/50/galaxy.png" alt="galaxy"/>
+                    <br>
+                    <p>Remaining Space</p>
+                    <h2><span id="availableSlot">70</span>/120</h2>
+                </div>
+                <div class="c c2">
+                    <img width="50" height="50" src="https://img.icons8.com/color/50/last-24-hours--v1.png" alt="last-24-hours--v1"/>
+                    <br>
+                    <p>Total cars parked</p>
+                    <h2 id="totalCars">95</h2>
+                    <p>Last 24 hours</p>
+                </div>
+                <div class="c c3">
+                    <img width="50" height="50" src="https://img.icons8.com/fluency/100/stocks-growth--v1.png" alt="stocks-growth--v1"/>
+                    <br>
+                    <p>Revenue</p>
+                    <h2>₹<span id="revenue"></span></h2>
+                </div>
+            </div>
+            <br><br>
+            <h2>Slots</h2>
+
+            <div class="slots">
+                <div class="slotCard" id="f">
+
+                    <div class="details">
+                        <p>A1</p>
+                        <select name="availability" id="availability">
+                            <option value="select">Select</option>
+                            <option value="occupied" id="occupied">Occupied</option>
+                            <option value="reserved" id="reserved">Reserved</option>
+                        </select>
+                        <br>
+                        <button id="remove">Release</button>
+                    </div>
+                    
+                </div>
+
+            <div id="add">
+                <p> 
+                    +
+                </p>
+            </div>
+
+        <div class="modal-container" id="modalContainer">    
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <span class="close" id="close">X</span>
+                    <h2>Add the details to fill the slot</h2>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="slotName">Slot</label><br>
+                        <input type="text" id="slotName" name="slotName"><br>
+                        <label for="name">Name</label><br>
+                        <input type="text" id="name" name="name"><br>
+                        <label for="vNumber">Vehicle number</label><br>
+                        <input type="text" id="vNumber" name="vNumber"><br>
+                        <label for="cDetails">Car</label><br>
+                        <input type="text" id="cDetails" name="cDetails"><br>
+                        <label for="request">Colour</label><br>
+                        <input type="text" id="request" name="request"><br>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" id="save">Save</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        </div>
+        <!-- rightbar -->
+        <!-- <div class="rightBar">
+
+        </div> -->
+        <script src="dashboard.js"></script>
+        
+</body>
+</html>
